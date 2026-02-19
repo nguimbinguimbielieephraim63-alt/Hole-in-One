@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hole in One Golf Resort</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .header-green { background-color: #006400; }
+    .subbar-green { background-color: #228B22; }
+    .btn-green {
+      background-color: #228B22;
+      transition: all 0.3s ease;
+    }
+    .btn-green:hover {
+      background-color: #006400;
+      transform: scale(1.05);
+    }
+
+    section { padding: 6rem 2rem; }
+    @media (min-width: 768px) { section { padding: 8rem 3rem; } }
+
+    h2 { margin-bottom: 3.5rem; }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);
+    }
+
+    /* Mobile menu transition */
+    #mobile-menu.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <header class="header-green text-white sticky top-0 z-50 shadow">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-bold">Hole in One</h1>
+      <nav class="hidden md:flex gap-10 text-lg">
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#facilities" class="hover:underline">Facilities</a>
+        <a href="#packages" class="hover:underline">Packages</a>
+        <a href="#gallery" class="hover:underline">Gallery</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+      <button id="hamburger" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <nav id="mobile-menu" class="md:hidden bg-green-900 px-6 py-8 space-y-6 text-center hidden">
+      <a href="#home" class="block py-3 text-lg hover:underline">Home</a>
+      <a href="#about" class="block py-3 text-lg hover:underline">About</a>
+      <a href="#facilities" class="block py-3 text-lg hover:underline">Facilities</a>
+      <a href="#packages" class="block py-3 text-lg hover:underline">Packages</a>
+      <a href="#gallery" class="block py-3 text-lg hover:underline">Gallery</a>
+      <a href="#contact" class="block py-3 text-lg hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <div class="subbar-green text-white text-center py-4 text-lg md:text-xl font-medium">
+    Explore Packages
+  </div>
+
+  <section id="home" style="background-color: #4a4a4a;" class="text-white flex items-center justify-center text-center min-h-[70vh]">
+    <div class="max-w-5xl px-6">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-16 md:mb-20">
+        Experience Golfing Excellence
+      </h1>
+      <button onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})"
+              class="btn-green text-white font-semibold text-lg md:text-xl py-5 px-12 md:py-6 md:px-16 rounded-full shadow-2xl">
+        Explore Packages
+      </button>
+    </div>
+  </section>
+
+  <section id="about" class="bg-white">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-green-800">About Us</h2>
+      <p class="text-lg md:text-xl leading-relaxed text-center mb-10 max-w-4xl mx-auto">
+        Hole in One Golf Resort, nestled in the heart of serene landscapes of Portugal, is a premier destination for golf and luxury. Established with a passion for the sport and hospitality, our resort offers world-class golf courses, including the renowned Sea View course, alongside exceptional accommodations and dining. Our mission is to provide unforgettable experiences, blending championship golf with unparalleled comfort and personalized service.
+      </p>
+      <p class="text-lg md:text-xl leading-relaxed text-center max-w-4xl mx-auto">
+        With a commitment to excellence, we cater to golf enthusiasts, tourists, and corporate groups, offering tailored packages and activities to suit every need. Discover the ultimate golfing getaway at Hole in One.
+      </p>
+    </div>
+  </section>
+
+  <section id="facilities" class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-green-800">Golf & Facilities</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+        <div class="bg-white p-10 rounded-2xl shadow-xl card">
+          <div class="text-7xl mb-8 text-center">⛳</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-green-700 text-center mb-6">Sea View Course</h3>
+          <p class="text-green-600 font-semibold text-center mb-6 text-lg">Championship Golf Courses</p>
+          <p class="text-center text-base md:text-lg">Three world-class courses, including the iconic Sea View course, designed to challenge and delight golfers of all levels.</p>
+        </div>
+        <div class="bg-white p-10 rounded-2xl shadow-xl card">
+          <div class="text-7xl mb-8 text-center">🏠</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-green-700 text-center mb-6">Clubhouse</h3>
+          <p class="text-green-600 font-semibold text-center mb-6 text-lg">Two Clubhouses</p>
+          <p class="text-center text-base md:text-lg">Relax and socialize in our elegant clubhouses, offering stunning views and top-tier amenities.</p>
+        </div>
+        <div class="bg-white p-10 rounded-2xl shadow-xl card">
+          <div class="text-7xl mb-8 text-center">🛏️</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-green-700 text-center mb-6">Hotel</h3>
+          <p class="text-green-600 font-semibold text-center mb-6 text-lg">Luxury Hotel</p>
+          <p class="text-center text-base md:text-lg">Spacious suites and rooms with breathtaking views, ensuring a comfortable and luxurious stay.</p>
+        </div>
+        <div class="bg-white p-10 rounded-2xl shadow-xl card">
+          <div class="text-7xl mb-8 text-center">🍽️</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-green-700 text-center mb-6">Restaurants & Café</h3>
+          <p class="text-green-600 font-semibold text-center mb-6 text-lg">Restaurants & Café</p>
+          <p class="text-center text-base md:text-lg">Enjoy exquisite dining experiences, from fine dining to casual café fare, with fresh, local ingredients.</p>
+        </div>
+        <div class="bg-white p-10 rounded-2xl shadow-xl card lg:col-start-2">
+          <div class="text-7xl mb-8 text-center">🛒</div>
+          <h3 class="text-2xl md:text-3xl font-bold text-green-700 text-center mb-6">Pro Shop</h3>
+          <p class="text-green-600 font-semibold text-center mb-6 text-lg">Pro Shop & Activities</p>
+          <p class="text-center text-base md:text-lg">Stock up at our pro shop and enjoy activities like floodlit driving range, golf lessons, digital coaching, and caddie service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="bg-green-800 text-white">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Tailored Golfing Experiences</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+        <div class="bg-white text-gray-900 p-10 md:p-14 rounded-2xl shadow-2xl card">
+          <h3 class="text-4xl md:text-5xl font-bold text-green-700 mb-8">Five Rounds</h3>
+          <p class="mb-8 text-lg md:text-xl">A premium golfing escape with full luxury.</p>
+          <ul class="space-y-5 mb-10 text-lg md:text-xl list-none">
+            <li>✓ Five night full board stay in a luxury suite</li>
+            <li>✓ Five 18-hole rounds</li>
+            <li>✓ One guaranteed round on Sea View course</li>
+            <li>✓ Complimentary digital coaching</li>
+          </ul>
+          <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+                  class="btn-green text-white font-bold py-5 px-12 rounded-full w-full text-xl">
+            Contact to Book
+          </button>
+        </div>
+        <div class="bg-white text-gray-900 p-10 md:p-14 rounded-2xl shadow-2xl card">
+          <h3 class="text-4xl md:text-5xl font-bold text-green-700 mb-8">Triple Tee</h3>
+          <p class="mb-8 text-lg md:text-xl">A quick golf getaway with great perks.</p>
+          <ul class="space-y-5 mb-10 text-lg md:text-xl list-none">
+            <li>✓ Two night stay with breakfast</li>
+            <li>✓ Three 18-hole rounds (Sea View if available)</li>
+            <li>✓ Complimentary buggy hire</li>
+            <li>✓ 20% pro shop discount</li>
+          </ul>
+          <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+                  class="btn-green text-white font-bold py-5 px-12 rounded-full w-full text-xl">
+            Contact to Book
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-green-800">Gallery</h2>
+      <p class="text-center text-xl md:text-2xl mb-16">Explore the beauty and luxury of Hole in One Golf Resort through our gallery.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14">
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1587174484352-8f5e6e3d0e6f?w=900" alt="" class="rounded-3xl shadow-2xl w-full h-72 md:h-96 object-cover">
+          <p class="mt-8 text-lg text-gray-700">Wooden blocks spelling 'Hole in One' on a golf course with ball and tee</p>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1597830794090-4e307a4e8e8c?w=900" alt="" class="rounded-3xl shadow-2xl w-full h-72 md:h-96 object-cover">
+          <p class="mt-8 text-lg text-gray-700">A golf ball resting on the green grass of a golf course</p>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1583422409512-7e1e3c0d3e6b?w=900" alt="" class="rounded-3xl shadow-2xl w-full h-72 md:h-96 object-cover">
+          <p class="mt-8 text-lg text-gray-700">Two golfers with bags walking across a lush green course at sunrise</p>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1622473596149-3d2c0e0e8b8d?w=900" alt="" class="rounded-3xl shadow-2xl w-full h-72 md:h-96 object-cover">
+          <p class="mt-8 text-lg text-gray-700">A golfer jumping in celebration, on a green course with a club</p>
+        </div>
+        <div class="text-center">
+          <img src="https://images.unsplash.com/photo-1616594039964-4e0b2d8d3d3e?w=900" alt="" class="rounded-3xl shadow-2xl w-full h-72 md:h-96 object-cover">
+          <p class="mt-8 text-lg text-gray-700">A golf club and ball on a tee, ready for a shot on the fairway</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-white">
+    <div class="max-w-3xl mx-auto px-6 md:px-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-green-800">Get in Touch</h2>
+      <form id="contactForm" class="space-y-10" onsubmit="handleSubmit(event)">
+        <div>
+          <label class="block text-xl font-medium mb-4">Name</label>
+          <input type="text" id="name" required class="w-full p-5 border border-gray-300 rounded-2xl text-xl focus:border-green-700 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-xl font-medium mb-4">Email</label>
+          <input type="email" id="email" required class="w-full p-5 border border-gray-300 rounded-2xl text-xl focus:border-green-700 focus:outline-none" />
+        </div>
+        <div>
+          <label class="block text-xl font-medium mb-4">Message</label>
+          <textarea id="message" rows="6" required class="w-full p-5 border border-gray-300 rounded-2xl text-xl focus:border-green-700 focus:outline-none"></textarea>
+        </div>
+        <button type="submit" class="btn-green text-white font-bold py-5 px-14 rounded-full w-full text-2xl shadow-2xl hover:scale-105 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="header-green text-white py-12 text-center text-lg">
+    <p>© Hole in One Golf Resort</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+      }
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const n = document.getElementById('name').value.trim();
+      const em = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if (n && em && msg) {
+        alert("Thank you!\nYour message has been sent.");
+        e.target.reset();
+      } else {
+        alert("Please fill all fields.");
+      }
+    }
+  </script>
+</body>
+</html>
